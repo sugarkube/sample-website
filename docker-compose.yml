@@ -13,4 +13,4 @@ services:
 
    # Mount the web directory within the container at /home/flask/app/web
    volumes:
-     - .:/opt/app/
+     - ./app/:/opt/app/

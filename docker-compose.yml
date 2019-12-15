@@ -1,0 +1,16 @@
+version: '3'
+services:
+ # Define the Flask web application
+ flaskapp:
+   # Build the Dockerfile that is in the web directory
+   build: .
+
+   # Always restart the container regardless of the exit status; try and restart the container indefinitely
+   restart: always
+
+   ports:
+     - "8080:8080"
+
+   # Mount the web directory within the container at /home/flask/app/web
+   volumes:
+     - .:/opt/app/
